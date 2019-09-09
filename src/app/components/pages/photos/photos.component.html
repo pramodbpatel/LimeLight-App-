@@ -1,0 +1,9 @@
+<img (click)="openModal(template)" [src]="photo.thumbnailUrl" style="cursor: pointer"/>
+<a (click)="openModal(template)" style="cursor: pointer">{{ photo.title }},  {{ photo.albumId }}, {{ photo.id }} </a>
+<ng-template #template>
+    <img class="modal-title pull-left" [src]="photo.url"/>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</ng-template>
+    

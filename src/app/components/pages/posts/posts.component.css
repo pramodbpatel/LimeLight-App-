@@ -1,0 +1,33 @@
+.posts {
+    margin-top: 50px;
+    border: 3px solid grey;
+  }
+  .search-posts {
+    max-width: 300px;
+    padding-top: 5px;
+    position: relative;
+    float: right;
+    margin:auto;
+    align-content: flex-end;
+  }
+  
+  .form-control {
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+  }
+  .form-control::placeholder  {
+    font-family: FontAwesome;
+  }
+
+  input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  /* When the input field gets focus, change its width to 100% */
+  input[type=text]:focus {
+    width: 100%;
+  }
+
+
+
+

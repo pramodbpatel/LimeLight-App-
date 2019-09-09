@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="albums">
+    <div class="row">
+        <div class="column" >
+          <div *ngFor = "let album of albums">
+            {{ album.title }} 
+            <a (click)="updateAlbumPhotos(album.id)" style="cursor: pointer; color: blue; text-decoration: underline"> View Photos </a>
+          </div>
+        </div>
+        <div class="column">
+          <div *ngFor="let photo of photos">
+              <app-photos [photo]="photo">
+                </app-photos>
+          </div>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  <!-- <h1 class="login-header">
+    Login for Simple Web Application
+  </h1> -->
+  <form [formGroup]="loginForm" class="login-container" (ngSubmit)="login()">
+
+      <div class="row">
+          <div class="col-md-3">
+            <label for="email">UserName:</label>
+          </div>
+          <div class="col-md-3" [ngClass]="{ 'has-error': isSubmitted && formControls.email.errors }">
+            <input type="email" formControlName="email" placeholder="Email">
+          </div>
+          <div class="col-md-3 help-block" *ngIf="isSubmitted && formControls.email.errors">
+              <span *ngIf="formControls.email.errors.required">&nbsp;Email is required&nbsp;</span>
+          </div>
+          <div class="col-md-3">
+              <input type="submit" value="Login">
+          </div>
+      </div>
+  </form>
+</div>

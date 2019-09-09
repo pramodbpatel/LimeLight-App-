@@ -1,0 +1,12 @@
+<app-header></app-header>
+  <div class="search-posts">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+      placeholder="Search">
+  </div>
+  <div class="posts">
+    <accordion *ngFor="let post of posts | filter:searchText">
+      <accordion-group heading="{{ post.title }}">
+        {{ post.body }}
+      </accordion-group>
+    </accordion>
+  </div>

@@ -1,0 +1,7 @@
+<app-header></app-header>
+    <div class="todos">
+   <div *ngFor="let todo of todos">
+      <input type="checkbox" [checked]="todo.completed">
+      {{ todo.title }}
+   </div>
+  </div>
